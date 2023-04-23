@@ -1,2 +1,7 @@
-# superconductivity-data-regression
-Splines, random forests and XGBoost on superconductivity data
+The superconductivity dataset was presented in Hamidieh, Kam (2018) "A data-driven statistical model for predicting the critical temperature of a superconductor." In this paper, the author builds machine learning models to predict the critical temperature of a superconductor. The most important features, as explained in the paper, are atomic radius, valence, electron affinity and atomic mass.
+
+The best performing model presented in the paper is a gradient boosted tree based model implemented using XGBoost, which has a cross-validated root mean squared error of  ±9.5 Kelvins.
+
+In the original paper, the data was not split into seperate train and validation splits, with the 25-fold cross-validated root mean squared error on the entire dataset being the performance metric. We will follow this approach, but with less cross-validation folds. The objective of our analysis is to try to improve on this score. We do not focus on feature importance since it was already covered in the paper.
+
+Such analysis is relevant since superconductors, i.e., materials that conduct current with zero resistance, or, in other words, without any energy loss, have significant practical applications, but current theoretical models have difficulty explaining the critical temperature, which is the temperature at which a material turns into a superconductor. In the absence of a solid theoretical model describing the critical temperature, empirical models such as the one presented by the authors in the paper are used by researches in synthesizing superconducting materials.
